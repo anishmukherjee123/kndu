@@ -5,13 +5,11 @@ import (
 	"fmt"
 	"os"
 	"strings"
-	"time"
 
 	"github.com/anishmukherjee123/kndu/pkg/logger"
 	"github.com/anishmukherjee123/kndu/pkg/plugin"
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
-	"github.com/tj/go-spin"
 	"k8s.io/cli-runtime/pkg/genericclioptions"
 )
 
@@ -33,24 +31,16 @@ func RootCmd() *cobra.Command {
 			log := logger.NewLogger()
 			log.Info("")
 
-			s := spin.New()
 			finishedCh := make(chan bool, 1)
 			namespaceName := make(chan string, 1)
 			go func() {
-				lastNamespaceName := ""
 				for {
 					select {
 					case <-finishedCh:
-						fmt.Printf("\r")
+						fmt.Printf("\n")
 						return
 					case n := <-namespaceName:
-						lastNamespaceName = n
-					case <-time.After(time.Millisecond * 100):
-						if lastNamespaceName == "" {
-							fmt.Printf("\r  \033[36mSearching for namespaces\033[m %s", s.Next())
-						} else {
-							fmt.Printf("\r  \033[36mSearching for namespaces\033[m %s (%s)", s.Next(), lastNamespaceName)
-						}
+						fmt.Printf("\n  Found namespace: (%s)", n)
 					}
 				}
 			}()

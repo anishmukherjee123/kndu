@@ -9,6 +9,8 @@ require (
 	github.com/PuerkitoBio/urlesc v0.0.0-20160726150825-5bd2802263f2 // indirect
 	github.com/blang/semver v3.5.1+incompatible
 	github.com/containerd/continuity v0.0.0-20181203112020-004b46473808 // indirect
+	github.com/coreos/go-etcd v2.0.0+incompatible // indirect
+	github.com/cpuguy83/go-md2man v1.0.10 // indirect
 	github.com/docker/docker v1.13.1
 	github.com/docker/go-connections v0.4.0 // indirect
 	github.com/emicklei/go-restful v0.0.0-20170410110728-ff4f55a20633 // indirect
@@ -26,22 +28,25 @@ require (
 	github.com/imdario/mergo v0.3.7 // indirect
 	github.com/manifoldco/promptui v0.3.2
 	github.com/mholt/archiver v3.1.1+incompatible
+	github.com/mitchellh/go-homedir v1.1.0 // indirect
 	github.com/onsi/gomega v1.27.6
 	github.com/opencontainers/go-digest v1.0.0-rc1 // indirect
 	github.com/peterbourgon/diskv v2.0.1+incompatible // indirect
 	github.com/smartystreets/assertions v0.0.0-20190401211740-f487f9de1cd3 // indirect
-	github.com/spf13/cobra v0.0.4
+	github.com/spf13/cobra v1.7.0
 	github.com/spf13/viper v1.4.0
 	github.com/stretchr/testify v1.8.2
 	github.com/tj/go-spin v1.1.0
+	github.com/ugorji/go/codec v0.0.0-20181204163529-d75b2dcb6bc8 // indirect
 	golang.org/x/net v0.17.0
 	gopkg.in/cheggaaa/pb.v1 v1.0.28 // indirect
 	gopkg.in/yaml.v2 v2.4.0
 	gotest.tools v2.2.0+incompatible // indirect
 	k8s.io/apimachinery v0.28.3
-	k8s.io/cli-runtime v0.0.0-20190314001948-2899ed30580f
+	k8s.io/cli-runtime v0.28.3
 	k8s.io/client-go v0.28.3
 	k8s.io/klog v0.4.0 // indirect
+	k8s.io/sample-cli-plugin v0.28.3 // indirect
 	sigs.k8s.io/kustomize v2.0.3+incompatible // indirect
 	sigs.k8s.io/structured-merge-diff v0.0.0-20190525122527-15d366b2352e // indirect
 )
