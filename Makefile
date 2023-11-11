@@ -7,7 +7,7 @@ test:
 
 .PHONY: bin
 bin: fmt vet
-	go build -o bin/kndu github.com/anishmukherjee123/kndu/cmd/plugin
+	go build -o bin/kndu .
 
 .PHONY: fmt
 fmt:
